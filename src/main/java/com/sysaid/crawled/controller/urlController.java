@@ -58,9 +58,9 @@ public class urlController {
         }
         else{
             ResponseEntity<urlEntity> urlEntityResponseEntity = processPage(url);
-            return new ResponseEntity<>(urlEntityResponseEntity, HttpStatus.ALREADY_REPORTED);
+            return new ResponseEntity<>(urlEntityResponseEntity, HttpStatus.OK);
         }
-        return new ResponseEntity<>(urlEntity, HttpStatus.OK);
+        return new ResponseEntity<>(urlEntity, HttpStatus.CREATED);
     }
 
     @GetMapping("/GetAllInnerLinks")
